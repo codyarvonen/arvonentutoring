@@ -397,21 +397,58 @@ a:hover {
 }
 
 .hero-visual {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-card-frame {
-  position: relative;
+.hero-headshot-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  overflow: visible;
-}
-
-.hero-banner-img {
+  padding: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  max-width: 320px;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
-  border: 4px solid #FFFFFF;
+  text-align: center;
+  transition: transform var(--transition-normal);
+}
+
+.hero-headshot-card:hover {
+  transform: translateY(-4px);
+}
+
+.hero-headshot-container {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+.hero-headshot-img {
+  width: 100%;
+  max-width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 3px solid #FFFFFF;
+}
+
+.hero-profile-details {
+  margin-top: 1rem;
+}
+
+.hero-profile-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-navy-900);
+}
+
+.hero-profile-details .profile-subtext {
+  font-size: 0.825rem;
+  color: var(--color-slate-500);
+  margin-bottom: 0;
 }
 
 .image-caption {
@@ -506,8 +543,8 @@ a:hover {
 
 .profile-img {
   width: 100%;
-  max-width: 320px;
-  height: 320px;
+  height: auto;
+  max-height: 380px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -555,6 +592,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .tag {
@@ -565,6 +603,35 @@ a:hover {
   font-size: 0.775rem;
   color: var(--color-slate-600);
   font-weight: 500;
+}
+
+.profile-social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0A66C2;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.25);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.linkedin-btn:hover {
+  background-color: #084E96;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.35);
 }
 
 .about-bio-cards {
@@ -820,7 +887,7 @@ a:hover {
 
 .pricing-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 }
 
@@ -832,25 +899,17 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  transition: all var(--transition-fast);
 }
 
-.price-card.featured {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-primary-light), var(--shadow-md);
-  background: #FFFFFF;
+.price-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
-.featured-ribbon {
-  position: absolute;
-  top: -12px;
-  right: 16px;
-  background: var(--color-primary);
-  color: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-full);
+.custom-plan-card {
+  border: 1.5px dashed var(--color-primary);
+  background-color: #FFFFFF;
 }
 
 .price-header h4 {
@@ -881,6 +940,13 @@ a:hover {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--color-navy-900);
+  line-height: 1;
+}
+
+.price-amount .amount-custom {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-primary);
   line-height: 1;
 }
 
@@ -1259,6 +1325,10 @@ a:hover {
   }
 
   .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-cards {
     grid-template-columns: 1fr;
   }
 }

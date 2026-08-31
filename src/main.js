@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (questionBtn) {
       questionBtn.addEventListener('click', () => {
         const isCurrentlyActive = item.classList.contains('active');
-        
+
         // Close all items
         faqItems.forEach(i => {
           i.classList.remove('active');
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Construct mailto link for direct client launch
-      const emailRecipient = 'cja3342@utexas.edu'; // Placeholder email ready for user updates
+      const emailRecipient = 'codyarvonen@utexas.edu'; // Placeholder email ready for user updates
       const mailSubject = encodeURIComponent(`Tutoring Inquiry: ${subject} (${name})`);
       const mailBody = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nStudent Level: ${level}\nFormat Preference: ${format}\nSubject: ${subject}\n\nMessage / Goals:\n${message}\n\n---\nSent from Tutoring Website Contact Form`
