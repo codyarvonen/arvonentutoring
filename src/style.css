@@ -414,6 +414,14 @@ a:hover {
   border: 4px solid #FFFFFF;
 }
 
+.image-caption {
+  font-size: 0.85rem;
+  color: var(--color-slate-500);
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
 .floating-stat-card {
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
@@ -899,6 +907,26 @@ a:hover {
   position: absolute;
   left: 0;
   color: var(--color-primary);
+}
+
+.custom-pricing-box {
+  margin-top: 1.75rem;
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+}
+
+.custom-pricing-box h4 {
+  font-size: 1.05rem;
+  color: var(--color-navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.custom-pricing-box p {
+  font-size: 0.875rem;
+  color: var(--color-slate-600);
+  line-height: 1.5;
 }
 
 /* FAQ Accordion */
