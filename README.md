@@ -69,8 +69,8 @@ git push -u origin main
 Yes! You can host your site **100% free on GitHub Pages** using a custom domain bought from Squarespace. Here is how:
 
 #### A. In GitHub Repository:
-1. In `tutoring-website/CNAME`, replace the text with your domain name (e.g., `austinstemtutoring.com` or `yourname.com`).
-2. Go to Repository **Settings** → **Pages** → **Custom domain**, type your domain name, and click **Save**.
+1. `public/CNAME` is configured with `arvonentutoring.com`.
+2. Go to Repository **Settings** → **Pages** → **Custom domain**, type `arvonentutoring.com`, and click **Save**.
 3. Check the box **Enforce HTTPS** (GitHub will automatically issue a free SSL security certificate!).
 
 #### B. In Squarespace Domain Settings (DNS Management):
